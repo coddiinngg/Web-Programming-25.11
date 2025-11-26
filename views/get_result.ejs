@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>GET 결과</title>
-</head>
-<body>
-  <h1>GET 요청 결과 페이지</h1>
-  <p><strong>값 1:</strong> <%= v1 %></p>
-  <p><strong>값 2:</strong> <%= v2 %></p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>GET 결과</title>
+  </head>
+  <body>
+    <h1>GET 요청 결과 페이지</h1>
+
+    <% if (typeof v1 !== "undefined" && typeof v2 !== "undefined") { %>
+    <p><strong>값 1:</strong> <%= v1 %></p>
+    <p><strong>값 2:</strong> <%= v2 %></p>
+    <% } else { %>
+    <p><strong>검색어:</strong> <%= query %></p>
+    <% } %>
+  </body>
 </html>

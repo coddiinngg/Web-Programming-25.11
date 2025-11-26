@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>클라이언트-서버 인터랙션 데모</title>
-</head>
-<body>
-  <h1>클라이언트-서버 요청 실습</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>클라이언트-서버 인터랙션 데모</title>
+  </head>
+  <body>
+    <h1>클라이언트-서버 요청 실습</h1>
 
-  <h2>1. GET 요청 (검색)</h2>
-  <form action="/search" method="get">
-    <input type="text" name="q" placeholder="검색어 입력">
-    <button>검색</button>
-  </form>
+    <h2>- GET 요청</h2>
+    <form action="/search" method="get">
+      <input type="text" name="value1" placeholder="값 1 입력" />
+      <input type="text" name="value2" placeholder="값 2 입력" />
+      <button>GET 요청 보내기</button>
+    </form>
 
-  <h2>2. POST 요청 (댓글 작성)</h2>
-  <form action="/submit" method="post">
-    <textarea name="text" rows="4" cols="40" placeholder="서버로 보낼 내용"></textarea><br>
-    <button>POST 요청 보내기</button>
-  </form>
-</body>
+    <hr />
+
+    <h2>- POST 요청</h2>
+    <form action="/submit-form" method="post">
+      <input type="text" name="value1" placeholder="값 1 입력" />
+      <input type="text" name="value2" placeholder="값 2 입력" />
+      <button>POST 요청 보내기</button>
+    </form>
+
+    <hr />
+
+    <h2>1. GET 요청</h2>
+    <form action="/search" method="get">
+      <input type="text" name="q" placeholder="검색어 입력" />
+      <button>검색</button>
+    </form>
+
+    <h2>2. POST 요청 (댓글 작성)</h2>
+    <form action="/submit" method="post">
+      <textarea
+        name="text"
+        rows="4"
+        cols="40"
+        placeholder="서버로 보낼 내용"
+      ></textarea
+      ><br />
+      <button>POST 요청 보내기</button>
+    </form>
+  </body>
 </html>

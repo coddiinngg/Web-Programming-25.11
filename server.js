@@ -13,8 +13,9 @@ app.use(express.static("public"));
 app.get("/", (req, res) => { res.render("index"); });
 
 app.get("/search", (req, res) => {
-  const query = req.query.q || "";
-  res.render("get_result", { query });
+  const v1 = req.query.value1 || "";
+  const v2 = req.query.value2 || "";
+  res.render("get_result", { v1, v2 });
 });
 
 app.post("/submit", (req, res) => {
